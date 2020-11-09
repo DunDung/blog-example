@@ -22,7 +22,7 @@ class MyOptional<T> {
         this.t = t;
     }
 
-    public static <T> MyOptional<T> ofNullable(T t) {
+    public static <T extends CharSequence> MyOptional<T> ofNullable(T t) {
         return new MyOptional<>(t);
     }
 
