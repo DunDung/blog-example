@@ -1,4 +1,4 @@
-package blog_example.recursive_call;
+package blog_example.recursivecall;
 
 import java.util.Arrays;
 import java.util.List;

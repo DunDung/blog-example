@@ -1,4 +1,4 @@
-package blog_example.for_each;
+package blog_example.foreach;
 
 import java.util.ArrayList;
 import java.util.Arrays;

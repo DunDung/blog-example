@@ -1,4 +1,4 @@
-package blog_example.repeat_phrase;
+package blog_example.repeatphrase;
 
 import java.util.List;
 

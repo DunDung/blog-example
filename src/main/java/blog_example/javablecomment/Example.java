@@ -1,4 +1,4 @@
-package blog_example.javable_comment;
+package blog_example.javablecomment;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,8 +13,13 @@ public class Example {
     }
 
     public static long countNull(List<String> names) {
+        asd(Arrays.asList(1, 3, 2));
         return names.stream()
                 .filter(Objects::isNull)
                 .count();
+    }
+
+    public static <T> void asd(List<T> list) {
+
     }
 }
