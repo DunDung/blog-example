@@ -1,15 +1,11 @@
 package blog_example.generics;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Generics {
     public static void main(String[] args) {
-        MyOptional<String> stringOptional = new MyOptional<>("hello");
-        List<String> list = new ArrayList<>();
-
-        System.out.println(stringOptional.getTypeName());
+        MyOptional myOptional = new MyOptional("hello");
+        System.out.println(myOptional.getTypeName());
 
     }
 
@@ -31,6 +27,7 @@ class MyOptional<T> {
     }
 
     public Type getTypeName() {
+        System.out.println(t.getClass().getName());
         try {
             return this.getClass().getDeclaredField("t").getType();
         } catch (NoSuchFieldException e) {
