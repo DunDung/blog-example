@@ -7,6 +7,10 @@ public class Car<T> {
         this.name = name;
     }
 
+    public T getName() {
+        return name;
+    }
+
     public static <T> Car<T> from(T name) {
         return new Car<>(name);
     }

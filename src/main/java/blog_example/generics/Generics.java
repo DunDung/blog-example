@@ -3,12 +3,11 @@ package blog_example.generics;
 import java.lang.reflect.Type;
 
 public class Generics {
-    public static void main(String[] args) {
-        MyOptional myOptional = new MyOptional("hello");
-        System.out.println(myOptional.getTypeName());
-
+    public static void main(String[] args) throws NoSuchFieldException {
+        Car<String> car = new Car<>("sport- car");
+        Class<?> carNameType = car.getClass().getDeclaredField("name").getType();
+        System.out.println(carNameType.getName());
     }
-
 }
 
 class MyOptional<T> {
@@ -27,7 +26,6 @@ class MyOptional<T> {
     }
 
     public Type getTypeName() {
-        System.out.println(t.getClass().getName());
         try {
             return this.getClass().getDeclaredField("t").getType();
         } catch (NoSuchFieldException e) {
